@@ -21,3 +21,4 @@
 - My approach was to allow the user to pick the item they want inserted in middle of the array then found the midpoint and inserted them between the index numbers
 ## Solution
 - Find midpoint in array then insert the item you want in the middle of the array
+[Whiteboard](/Users/nataliesinner/codefellows/401/data-structures-and-algorithms-python/assets/array_shift.jpeg)
