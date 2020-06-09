@@ -22,3 +22,13 @@
 ## Solution
 - Find midpoint in array then insert the item you want in the middle of the array
 [Whiteboard](/Users/nataliesinner/codefellows/401/data-structures-and-algorithms-python/assets/array_shift.jpeg)
+
+## Array Binary Search
+
+## Challenge
+- Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
+## Approach & Efficiency
+- My approach was to allow the user to pick a number and be able to tell if that number was in the array by showing a 2 if it was and a -1 if it was not. 
+## Solution
+- Find if user picked number that was in array by showing 2 if it is and -1 if it is not. 
+[Whiteboard/Google Doc](https://docs.google.com/document/d/1sBieMTDNo6zWNvBqY8s-5npQkK0uGUZemvrp6tvqasE/edit?usp=sharing) 
