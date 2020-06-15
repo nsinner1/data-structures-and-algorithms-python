@@ -32,3 +32,15 @@
 ## Solution
 - Find if user picked number that was in array by showing 2 if it is and -1 if it is not. 
 [Whiteboard/Google Doc](https://docs.google.com/document/d/1sBieMTDNo6zWNvBqY8s-5npQkK0uGUZemvrp6tvqasE/edit?usp=sharing) 
+
+# Singly Linked List
+
+## Challenge
+Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
+Within your LinkedList class, include a head property. Upon instantiation, an empty Linked List should be created.
+
+## Approach & Efficiency
+I followed the demo code and worked off of that. 
+
+## API
+<!-- Description of each method publicly available to your Linked List -->
