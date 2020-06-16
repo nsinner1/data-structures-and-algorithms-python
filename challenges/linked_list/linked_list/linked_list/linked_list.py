@@ -46,6 +46,33 @@ class LinkedList:
         self.head = node
 
 
+    def append_val(self, value):
+        current = self.head
+        while current != None:
+            if current.next_ == None:
+                newNode = Node(value)
+                current.next_ = newNode
+            current = current.next_
+
+
+    def length(self):
+	    current = self.head
+	    count = 0
+	    while current != None:
+		    count += 1
+		    current = current.next_
+	    return count
+
+
+    def kth_from_start(self, k):
+        length = self.length()
+        current = self.head
+        kth_from_start = length - k
+        for k in range(kth_from_start):
+	        current = current.next_
+        return current.val
+
+
 ll = LinkedList()
 #print(ll)
 
