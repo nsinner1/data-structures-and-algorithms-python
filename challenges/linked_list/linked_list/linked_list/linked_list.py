@@ -43,7 +43,12 @@ class LinkedList:
         node = Node(value)
         if self.head is not None:
             node.next_ = self.head
-        self.head = node
+            self.head = node
+        else:
+            self.head = node
+
+        # node.next = self.head
+        # self.head = node
 
 
     def append_val(self, value):
