@@ -1,85 +1,72 @@
 class Node:
     """
-    This is the Node Class
+    This is the Node class
     """
 
-    def __init__(self, value, next_ = None):
+    def __init__(self, value, next_node = None):
         """
-        This is my initialize of the Node
+        This is to create a node with a value and a next reference
+        Args:
+            value : node value 
+            next_node : reference to next node
         """
+        
         self.value = value
-        self.next_ = next_
-
+        self.next_node = next_node
 
     def __repr__(self):
-        return f'{self.value} : {self.next_}'
-
+        return {'Value':{self.value}, 'Next Node':{self.next_node}}
+        
 
     def __str__(self):
-        return f'{self.value} : {self.next_}'
+        return f"{self.value}, Next_Node={self.next_node}"
 
 
 class LinkedList:
     """
-    This is a class that creates linked lists
+    This is the class LinkedList
     """
-
     def __init__(self):
         """
-        This is my initialize of linked lists
+        This is to initializa the LinkedList
         """
+
         self.head = None
 
-
+    
     def __str__(self):
-         return f'head : {self.head}'
+        """
+        prints LinkedList 
+        """
+        return f"head: {self.head}"
 
-
+    
     def insert(self, value):
         """
-        This function inserts a new value into the linked list
+        Method to insert a node to the LinkedList.
+        """
+        
+        node = Node(value)
+        
+        if self.head is not None:
+            node.next_node = self.head
+        self.head = node
+
+    def includes(self, value):
+        """
+        Method to check in a Linked List includes a value.
         """
 
-        node = Node(value)
-        if self.head is not None:
-            node.next_ = self.head
-            self.head = node
-        else:
-            self.head = node
-
-        # node.next = self.head
-        # self.head = node
-
-
-    def append_val(self, value):
         current = self.head
-        while current != None:
-            if current.next_ == None:
-                newNode = Node(value)
-                current.next_ = newNode
-            current = current.next_
 
-
-    def length(self):
-	    current = self.head
-	    count = 0
-	    while current != None:
-		    count += 1
-		    current = current.next_
-	    return count
-
-
-    def kth_from_start(self, k):
-        length = self.length()
-        current = self.head
-        kth_from_start = length - k
-        for k in range(kth_from_start):
-	        current = current.next_
-        return current.val
-
+        while current is not None:
+            if current.value == value:
+                return True
+            current = current.next_node
+        
+        return False
 
 ll = LinkedList()
-#print(ll)
 
 ll.insert('Saturday')
 ll.insert('Friday')
@@ -91,7 +78,7 @@ ll.insert('Sunday')
 
 print(ll.head)
 
+print(ll.includes('Saturday'))
+print(ll.includes('November'))
 
-
-
-
+print(Node(ll))
