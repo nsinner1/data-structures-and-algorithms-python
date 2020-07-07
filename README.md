@@ -125,3 +125,19 @@ Both enqueue and dequeue are O(n) time and O(1) space
 
 ## Solution
 [Whiteboard](assets/PseudoQueue.png)
+
+
+# Challenge Summary
+First-in, First out Animal Shelter.
+
+## Challenge Description
+Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+Implement the following methods:
+enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object.
+dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
+
+## Approach & Efficiency
+For the enqueue(animal) method time big O(1), space big O(1) For the dequeue(pref) method time big O(n), space big O(n)
+
+## Solution
+[Whiteboard](assets/animial_shelter.png)
