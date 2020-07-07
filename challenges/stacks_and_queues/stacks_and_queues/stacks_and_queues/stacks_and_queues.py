@@ -59,3 +59,22 @@ class Queue:
             return True
         else:
             return False
+
+
+class PseudoQueue:
+
+    def __init__(self):
+        self.add = Stack()
+        self.remove = Stack()
+
+    def enqueue(self, value):
+	    while self.remove.peek():
+		    self.add.push(self.remove.pop())
+	
+	    self.add.push(value)
+	    return self.add.top.value
+
+    def dequeue(self):
+	    while self.add.peek():
+		    self.remove.push(self.add.pop())
+	    return self.remove.pop()
