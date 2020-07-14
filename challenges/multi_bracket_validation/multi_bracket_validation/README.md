@@ -12,4 +12,4 @@ Curly Brackets : {}
 Both enqueue and dequeue are O(n) time and O(n) space
 
 ## Solution
-[Whiteboard](assets/PseudoQueue.png)
+[Whiteboard](assets/multi_bracket_validation.png)
