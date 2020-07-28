@@ -1,3 +1,10 @@
+class Node:
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+
+
 class BinaryTree:
     def __init__(self):
         self.root = None
@@ -14,6 +21,23 @@ class BinaryTree:
         walk(self.root)
 
         return output
+
+
+    def max_value(self):
+        if self.root:
+            _max = self.root.value
+
+            def traverse(node):
+                nonlocal _max
+                if node:
+                    if node.value > _max:
+                        _max = node.value
+                    traverse(node.left)
+                    traverse(node.right)
+                    return _max
+
+            traverse(self.root)
+            return _max
 
 
 class BST(BinaryTree):
@@ -42,11 +66,6 @@ class BST(BinaryTree):
 
         walk(self.root, n)
 
-class Node:
-    def __init__(self, value, left=None, right=None):
-        self.value = value
-        self.left = left
-        self.right = right
 
 
 bst = BST()
@@ -59,4 +78,5 @@ bst.add(-1)
 bst.add(50)
 bst.add(34)
 print(bst)
-print(bst.pre_order())
+# print(bst.pre_order())
+print(bst.max_value())
