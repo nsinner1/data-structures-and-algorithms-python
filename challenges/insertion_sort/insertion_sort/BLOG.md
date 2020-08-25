@@ -4,18 +4,18 @@ Insertion sort is a type of sorting algorithm that traverses an array multiple t
 ## Pseudocode
 
 ```
- InsertionSort(int[] lst)
-
-    FOR i = 1 to len(lst)
-
+InsertionSort(int[] arr)
+  
+    FOR i = 1 to arr.length
+    
       int j <-- i - 1
-      int temp <-- lst[i]
-
-      WHILE j >= 0 AND temp < lst[j]
-        lst[j + 1] <-- lst[j]
+      int temp <-- arr[i]
+      
+      WHILE j >= 0 AND temp < arr[j]
+        arr[j + 1] <-- arr[j]
         j <-- j - 1
-
-      lst[j + 1] <-- temp
+        
+      arr[j + 1] <-- temp
 ```
 
 ## Trace
