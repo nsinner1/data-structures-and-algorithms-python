@@ -208,7 +208,7 @@ O(n) time
 O(n) space
 
 ## Solution
-[Whiteboard](assets/Screen Shot 2020-07-27 at 7.26.34 PM.png)
+[Whiteboard](assets/binary_tree.png)
 
 
 
