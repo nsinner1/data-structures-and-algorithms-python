@@ -1,84 +1,112 @@
 class Node:
-    """
-    This is the Node class
-    """
+    """ Class for the Node instances"""
 
-    def __init__(self, value, next_node = None):
-        """
-        This is to create a node with a value and a next reference
-        Args:
-            value : node value 
-            next_node : reference to next node
-        """
-        
+    def __init__(self, value):
         self.value = value
-        self.next_node = next_node
-
-    def __repr__(self):
-        return {'Value':{self.value}, 'Next Node':{self.next_node}}
-        
-
-    def __str__(self):
-        return f"{self.value}, Next_Node={self.next_node}"
-
+        self.next = None
 
 class LinkedList:
-    """
-    This is the class LinkedList
-    """
+    """ Class for the LInkedLists instances"""
+
     def __init__(self):
-        """
-        This is to initializa the LinkedList
-        """
+        """method to iniate a LinkedList"""
 
         self.head = None
 
-    
-    def __str__(self):
-        """
-        prints LinkedList 
-        """
-        return f"head: {self.head}"
+    def __repr__(self):
+        """method to represent that LinkedList created"""
 
-    
+        return "LinkedList created"
+
     def insert(self, value):
-        """
-        Method to insert a node to the LinkedList.
-        """
-        
+        """method to insert new node to the begining of the list"""
+
         node = Node(value)
-        
-        if self.head is not None:
-            node.next_node = self.head
+        node.next = self.head
         self.head = node
 
     def includes(self, value):
-        """
-        Method to check in a Linked List includes a value.
-        """
-
+        """method to check if the given value in the liked list"""
         current = self.head
-
-        while current is not None:
+        while current:
             if current.value == value:
                 return True
-            current = current.next_node
-        
+            else:
+                current = current.next
         return False
 
-ll = LinkedList()
+    def __str__(self):
+        """method that returns a string that represents all list elements"""
 
-ll.insert('Saturday')
-ll.insert('Friday')
-ll.insert('Thursday')
-ll.insert('Wednesday')
-ll.insert('Tuesday')
-ll.insert('Monday')
-ll.insert('Sunday')
+        list_str = ''
+        current = self.head
+        while current:
+            # print(current, "current")
+            list_str += str(current.value ) + ', '
+            current = current.next
+        return list_str[:-2]
 
-print(ll.head)
+    def append(self, value):
+        """method to append new node to the end of the list"""
 
-print(ll.includes('Saturday'))
-print(ll.includes('November'))
+        current = self.head
+        while current:
 
-print(Node(ll))
+            print(current.value)
+            if current.next == None:
+                current.next = Node(value)
+                return self.__str__()
+            else:
+                current = current.next
+
+        self.head = Node(value)
+        return self.__str__()
+
+    def insert_before(self, value, new_value):
+        """method to insert new element before the given element of the list"""
+
+        if self.includes(value):
+            current = self.head
+            previous = None
+            while current:
+                if current.value == value:
+                    node = Node(new_value)
+                    node.next = current
+                    if previous:
+                        previous.next = node
+                    else:
+                        self.head = node
+                    return self.__str__()
+                previous = current
+                current = current.next
+        else:
+            return 'Value is not in the list'
+
+
+    def insert_after(self, value, new_value):
+        """method to insert new element after the given element of the list"""
+
+        if self.includes(value):
+            current = self.head
+            while current:
+                if current.value == value:
+                    node = Node(new_value)
+                    node.next = current.next
+                    current.next = node
+                    return self.__str__()
+                current = current.next
+        else:
+            return 'Value is not in the list'
+
+    def length_(self):
+        """method to get lenght of the list"""
+
+        length = 0
+        current = self.head
+        while current:
+            length+=1
+            current = current.next
+        return length
+
+
+

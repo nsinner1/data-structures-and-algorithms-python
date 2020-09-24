@@ -1,45 +1,27 @@
 from linked_list.linked_list import Node, LinkedList
 
+def test_empty_linked_list():
+    linked_list = LinkedList()
+    assert linked_list.head == None
 
-def test_node_exist():
-    assert Node
+def test_Node_created():
+    assert 3 == Node(3).value
+    assert None == Node(3).next
 
-def test_LinkedList_exist():
-    assert LinkedList
+def test_insert_to_empty():
+    val = 5
+    linked_list = LinkedList()
+    linked_list.insert(val)
+    assert linked_list.head.value == 5
 
-def test_empty_list():
-    ll = LinkedList()
-    assert ll
-
-def test_insert_to_empty_list():
-    ll = LinkedList()
-    ll.insert('Sunday')
-    assert ll.head.value == 'Sunday'
-
-def test_insert_multiple_to_empty_list():
-    ll = LinkedList()
-    ll.insert('Tuesday')
-    ll.insert('Monday')
-    ll.insert('Sunday')
-    assert ll.head.value == 'Sunday'
-
-def test_next_node_value():
-    ll = LinkedList()
-    ll.insert('Tuesday')
-    ll.insert('Monday')
-    ll.insert('Sunday')
-    assert ll.head.next_node.value == 'Monday'
-
-def test_includes_value_true():
-    ll = LinkedList()
-    ll.includes('Monday')
-    assert True
-
-def test_includes_value_false():
-    ll = LinkedList()
-    actual = ll.includes('November')
-    expected = False
-    assert actual == expected
-
-
-
+def test_head_to_the_first_el():
+   linked_list = LinkedList()
+   linked_list.insert('a')
+   assert linked_list.head.value == 'a'
+   linked_list.insert('b')
+   assert linked_list.head.value == 'b'
+   linked_list.insert('c')
+   assert linked_list.head.value == 'c'
+   linked_list.insert('d')
+   assert linked_list.head.value == 'd'
+   assert linked_list.head.next.next.value == 'b'
