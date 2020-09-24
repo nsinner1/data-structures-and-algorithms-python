@@ -9,7 +9,7 @@
 - My approach was to append new_node to end of node list. My approach was to insertBefore and insertAfter any given value. 
 ## Solution
 - Find if adding new_node to linked list worked. 
-[Whiteboard](/Users/nataliesinner/codefellows/401/data-structures-and-algorithms-python/assets/linkedlistinsert.png)
+[Whiteboard](assets/linked_list_insert.png)
 
 ## k-th value from the end of a linked list.
 

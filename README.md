@@ -374,3 +374,17 @@ Big O(n) time and O(n) space
 
 ## Solution
 [Whiteboard](assets/left_join.png)
+
+
+## Linked List Insertions
+
+## Challenge
+- Write the following methods for the Linked List class:
+  - .append(value) which adds a new node with the given value to the end of the list
+  - .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+  - .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+## Approach & Efficiency
+- My approach was to append new_node to end of node list. My approach was to insertBefore and insertAfter any given value. 
+## Solution
+- Find if adding new_node to linked list worked. 
+[Whiteboard](assets/linked_list_insert.png)
