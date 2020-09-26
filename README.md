@@ -388,3 +388,47 @@ Big O(n) time and O(n) space
 ## Solution
 - Find if adding new_node to linked list worked. 
 [Whiteboard](assets/linked_list_insert.png)
+
+
+## k-th value from the end of a linked list.
+
+## Challenge 
+- Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+## Approach & Efficiency 
+- My approach was to write a function that iterated through linked list and counted how many nodes in list
+## Solution
+- Find if counting nodes in linked list. 
+[Whiteboard](assets/ll_kth.png)
+
+
+# Graphs
+A graph is a non-linear data structure that can be looked at as a collection of vertices (or nodes) potentially connected by line segments named edges.
+
+## Challenge
+Implement the graph, which should be represented as an adjacency list, and should include the following methods: add_node(), add_edge(), get_nodes(), get_neighbors(), size()
+
+## Approach & Efficiency
+add_node() time Big O(1), space Big O(1)
+add_edge() time Big O(1), space Big O(1)
+get_nodes() time Big O(1), space Big O(1)
+get_neighbors() time Big O(1), space Big O(1)
+size() time Big O(1), space Big O(1)
+
+## API
+AddNode()
+Adds a new node to the graph
+Takes in the value of that node
+Returns the added node
+AddEdge()
+Adds a new edge between two nodes in the graph
+Include the ability to have a “weight”
+Takes in the two nodes to be connected by the edge
+Both nodes should already be in the Graph
+GetNodes()
+Returns all of the nodes in the graph as a collection (set, list, or similar)
+GetNeighbors()
+Returns a collection of edges connected to the given node
+Takes in a given node
+Include the weight of the connection in the returned collection
+Size()
+Returns the total number of nodes in the graph
