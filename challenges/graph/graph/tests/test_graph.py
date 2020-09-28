@@ -1,5 +1,5 @@
 import pytest
-from graph.graph import Graph, Vertex, Edge 
+from graph.graph import Graph, Vertex, Edge, Queue
 
 
 def test_add_graph():
@@ -59,4 +59,11 @@ def test_get_neighbors_no_neighbors():
     neighbors = graph.get_neighbors(spam)
     assert len(neighbors) == 0
     assert neighbors == []
+
+
+def test_breadth_first_empty_graph():
+    graph = Graph()
+    spam = Vertex("spam")
+    with pytest.raises(ValueError):
+        vertices_lst = graph.breadth_first(spam)
 
