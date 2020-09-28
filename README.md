@@ -432,3 +432,16 @@ Takes in a given node
 Include the weight of the connection in the returned collection
 Size()
 Returns the total number of nodes in the graph
+
+
+# Challenge Summary
+Implement a breadth-first traversal on a graph.
+
+## Challenge Description
+Extend your graph object with a breadth-first traversal method that accepts a starting node. Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. Display the collection.
+
+## Approach & Efficiency
+Both enqueue and dequeue are O(n) time and O(n) space
+
+## Solution
+[Whiteboard](assets/breadth_first_graph.png)
