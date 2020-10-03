@@ -88,7 +88,7 @@ class Graph:
         vertices = []
         depth = Stack()
 
-        if starting_vertex not in self._adjacency_list:
+        if starting_vertex not in self.adjacency_list:
             raise ValueError
         
         depth.push(starting_vertex)
@@ -105,7 +105,7 @@ class Graph:
 
                    depth.push(neighbor[0])
 
-        for node in self._adjacency_list:
+        for node in self.adjacency_list:
             node.visited = False
 
         return vertices

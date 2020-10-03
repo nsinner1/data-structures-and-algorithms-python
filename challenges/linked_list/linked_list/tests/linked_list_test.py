@@ -25,3 +25,6 @@ def test_head_to_the_first_el():
    linked_list.insert('d')
    assert linked_list.head.value == 'd'
    assert linked_list.head.next.next.value == 'b'
+
+
+

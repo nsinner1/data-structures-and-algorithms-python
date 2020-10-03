@@ -19,4 +19,4 @@
 - My approach was to write a function that iterated through linked list and counted how many nodes in list
 ## Solution
 - Find if counting nodes in linked list. 
-[Whiteboard](/Users/nataliesinner/codefellows/401/data-structures-and-algorithms-python/assets/ll-kth_from_end.png)
+[Whiteboard](assets/ll_kth.png)
