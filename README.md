@@ -458,3 +458,16 @@ O(n^2) time and O(n) space
 
 ## Solution
 [Whiteboard](assets/get_edges.png)
+
+
+# Challenge Summary
+Conduct a depth first preorder traversal on a graph
+
+## Challenge Description
+Create a function that accepts an adjacency list as a graph, and conducts a depth first traversal. Without utilizing any of the built-in methods available to your language, return a collection of nodes in their pre-order depth-first traversal order.
+
+## Approach & Efficiency
+Both enqueue and dequeue are O(n) time and O(n) space
+
+## Solution
+[Whiteboard](assets/graph_depth_first.png)
